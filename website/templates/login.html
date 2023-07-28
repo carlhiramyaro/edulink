@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>landing page</title>
+  </head>
+  <body>
+    <div class="screen">
+      <div class="header">
+        <div class="child"><h1 class="sitename">Edulink</h1></div>
+      </div>
+      <div class="slogan">
+        <div class="child">
+          <h2 class="quote">Welcome back !</h2>
+        </div>
+      </div>
+      <div class="block">
+        <form class="form" method="POST">
+          <div class="container">
+            <h2 class="signup">Log in</h2>
+            <div class="inputholder">
+              <input type="text" class="input" placeholder="Enter email" id="email" name="email"/>
+            </div>
+            <div class="inputholder">
+              <input type="password" class="input" placeholder="Enter password" id="password" name="password"/>
+            </div>
+            <div class="inputholder">
+              <button><b>Login</b></button>
+            </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    .screen {
+      height: 100vh;
+      width: 100vw;
+    }
+    .header {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #1b6b93;
+      height: 20vh;
+    }
+    .sitename {
+      color: white;
+    }
+    .slogan {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #4fc0d0;
+      height: 10vh;
+    }
+    .quote {
+      color: white;
+    }
+    .block {
+      width: 100vw;
+      height: 70vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .form {
+      background-color: #a2ff86;
+      width: 40vw;
+      height: 60vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .inputholder {
+      height: 5vh;
+      width: 15vw;
+      margin: 2vh;
+      padding: 5%;
+    }
+    .signup {
+      text-align: center;
+      color: #164b60;
+    }
+    .input {
+      height: 100%;
+      width: 100%;
+      border-color: transparent;
+    }
+    .text {
+      color: #164b60;
+    }
+    button {
+      width: 100%;
+      height: 5vh;
+      color: white;
+      background-color: #164b60;
+      border-radius: 10cm;
+    }
+  </style>
+</html>
