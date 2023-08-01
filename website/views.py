@@ -10,3 +10,8 @@ def landing():
 @views.route('/home')
 def home():
     return render_template("home.html")
+
+@views.route('/subject')
+def subject():
+    return render_template("subject.html")
+

@@ -19,6 +19,13 @@
         <form class="form" method="POST">
           <div class="container">
             <h2 class="signup">Sign up</h2>
+            {% with messages = get_flashed_messages(with_categories=true) %} {%
+            if messages %} {% for message in messages %}
+            <div class="message" role="alert">
+              <center>{{ message }}</center>
+            </div>
+            {% endfor %} {% endif %} {% endwith %}
+
             <div class="inputholder">
               <input
                 type="text"
