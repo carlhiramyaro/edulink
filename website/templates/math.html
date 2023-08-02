@@ -1,12 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    <h1>Math</h1>
-    
-</body>
+  </head>
+  <body>
+    <div class="header"><h1 class="heading">Books for {{ subject }}</h1></div>
+
+    <div class="book-list">
+      {% for book in books %}
+      <div class="book">
+        <center>
+          <img src="{{ book.image_link }}" alt="{{ book.title }}" />
+        </center>
+        <center><h2>{{ book.title }}</h2></center>
+        <center><p>Author: {{ book.author }}</p></center>
+        <center>
+          <a href="{{ book.read_link }}" target="_blank">Read Online</a>
+        </center>
+      </div>
+      {% endfor %}
+    </div>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .screen {
+        height: 100vh;
+        width: 100vw;
+      }
+      .header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #1b6b93;
+        height: 20vh;
+        margin-bottom: 2vh;
+      }
+      .heading {
+        color: white;
+      }
+      .book {
+        padding: 2%;
+      }
+      .book-list {
+        display: flex;
+      }
+    </style>
+  </body>
 </html>
