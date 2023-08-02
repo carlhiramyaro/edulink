@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>"AIzaSyAA1pU9qxfXrwkEnic6XwYZFCnXjvrrs44"</title>
+  <title>Search</title>
 </head>
 <body>
-  <h1>'AIzaSyAA1pU9qxfXrwkEnic6XwYZFCnXjvrrs44'</h1>
+  <h1>Search</h1>
   <form action="/search" method="POST">
     <input type="text" name="searchdata" placeholder="Enter prefared subject">
     <button type="submit">Search</button>
@@ -23,7 +23,7 @@
       const searchQuery = formData.get('searchdata');
 
       fetch('/search', {
-        method: 'POST',
+        method: 'GET',
         body: formData
       })
       .then(response => response.json())

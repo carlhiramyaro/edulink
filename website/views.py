@@ -15,3 +15,14 @@ def home():
 def subject():
     return render_template("subject.html")
 
+@views.route('/math')
+def math():
+    return render_template("math.html")
+
+@views.route('/science')
+def science():
+    return render_template("science.html")
+
+@views.route('/history')
+def history():
+    return render_template("history.html")

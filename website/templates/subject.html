@@ -12,13 +12,13 @@
       </div>
       <form action="POST" class="form">
         <div class="subjectholder">
-          <div class="subject"><h1>Math</h1></div>
+          <div class="subject"><h1><a href="{{ url_for('views.math') }}">Math</a></h1></div>
         </div>
         <div class="subjectholder">
-          <div class="subject"><h1>Science</h1></div>
+          <div class="subject"><h1><a href="{{ url_for('views.science') }}">Science</h1></div>
         </div>
         <div class="subjectholder">
-          <div class="subject"><h1>History</h1></div>
+          <div class="subject"><h1><a href= "{{ url_for('views.history') }}">History</h1></div>
         </div>
       </form>
       
