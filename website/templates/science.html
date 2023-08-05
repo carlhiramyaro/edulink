@@ -6,18 +6,18 @@
     <title>Document</title>
   </head>
   <body>
-    <div class="header"><h1 class="heading">Books for {{ subject }}</h1></div>
+    <div class="header"><h1 class="heading">videos for {{ subject }}</h1></div>
 
-    <div class="book-list">
-      {% for book in books %}
-      <div class="book">
+    <div class="video-list">
+      {% for video in youtube %}
+      <div class="video">
         <center>
-          <img src="{{ book.image_link }}" alt="{{ book.title }}" />
+          <img src="{{ video.image_link }}" alt="{{ video.title }}" />
         </center>
-        <center><h2>{{ book.title }}</h2></center>
-        <center><p>Author: {{ book.author }}</p></center>
+        <center><h2>{{ video.title }}</h2></center>
+        <center><p>Author: {{ video.author }}</p></center>
         <center>
-          <a href="{{ book.read_link }}" target="_blank">Read Online</a>
+          <a href="{{ video.video_link }}" target="_blank">Read Online</a>
         </center>
       </div>
       {% endfor %}
@@ -43,10 +43,10 @@
       .heading {
         color: white;
       }
-      .book {
+      .video {
         padding: 2%;
       }
-      .book-list {
+      .video-list {
         display: flex;
       }
     </style>
