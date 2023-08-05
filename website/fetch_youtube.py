@@ -1,11 +1,18 @@
 import requests
+from dotenv import load_dotenv
+import os
+
+
+
+def configure():
+    load_dotenv()
+
 
 def fetch_youtube_data(subject_query):
-    key = 'AIzaSyAZfv9BMAP2KSrlk4LPK8XePqz3hHo0mHA'
-    api_url = 'https://www.googleapis.com/youtube/v3/search'
-    #https://www.googleapis.com/youtube/v3/search?q=math&part=snippet&key=AIzaSyAZfv9BMAP2KSrlk4LPK8XePqz3hHo0mHA
+   
+    api_url = f"https://www.googleapis.com/youtube/v3/search?q=math&part=snippet&key={os.getenv('key')}"
 
-    
+     
     # Modify the query to target youtube suitable for kids aged 10 to 25
     age_range_query = "10-25"
     query = f'{subject_query} educational videos'
@@ -14,7 +21,7 @@ def fetch_youtube_data(subject_query):
     #Parameters of the Youtube API requests
     params = {
         'q': query,
-        'key': key,
+        'key': os.getenv('key'),
         'part': 'snippet',
         'type': 'video',
         'maxResults': 5  # You can adjust this based on your preference
@@ -44,4 +51,5 @@ def fetch_youtube_data(subject_query):
 math_youtube_data = fetch_youtube_data("mathematics")
 print(math_youtube_data)
 
-
+def main():
+    configure()
